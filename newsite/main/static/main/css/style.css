@@ -4,16 +4,17 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
-  padding: 0%;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-  color: #149ddd;
+  color: hsl(138, 68%, 36%);
   text-decoration: none;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: hsl(138, 68%, 36%);
   text-decoration: none;
 }
 
@@ -31,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #149ddd;
+  background: hsl(138, 68%, 36%);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -43,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #2eafec;
+  background: hsl(138, 68%, 50%);
   color: #fff;
 }
 .back-to-top.active {
@@ -67,11 +68,23 @@ h1, h2, h3, h4, h5, h6 {
   background: #040b14;
   overflow-y: auto;
 }
+#fractal{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 175%;
+  height: 50%;
+  top: 25%;
+  left: -40%;
+  position: absolute;
+  z-index: -1;
+}
 #header .profile img {
   margin: 15px auto;
   display: block;
   width: 120px;
   border: 8px solid #2c2f3f;
+  z-index: 1;
 }
 #header .profile h1 {
   font-size: 24px;
@@ -101,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 #header .profile .social-links a:hover {
-  background: #149ddd;
+  background: hsl(138, 68%, 36%);
   color: #fff;
   text-decoration: none;
 }
@@ -110,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 300px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1000px) {
   #header {
     left: -300px;
   }
@@ -119,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0;
   }
 }
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -154,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 .nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
-  color: #149ddd;
+  color: hsl(138, 68%, 36%);
 }
 
 /* Mobile Navigation */
@@ -167,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color: hsl(138, 68%, 36%);
   color: #fff;
   width: 40px;
   height: 40px;
@@ -187,23 +201,71 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Video Section
 --------------------------------------------------------------*/
 .video-container {
-  background-color: red;
+  padding: 0px;
   width: 100%;
-  height: 200px;
+  height: 100vh;
+  background-color: grey;
+  background-size: cover;
+  overflow: hidden;
 }
-.video-container video{
-  width: 100%;
+.video-container video {
+  z-index: 2;
   height: 100%;
-  padding: -60px 0;
-  margin: 0px;
+  width:120%;
+  overflow: hidden;
 }
 
-@media (min-width: 1024px) {
-  #video-container {
-    background-attachment: fixed;
+@media (max-width: 950px) {
+  .video-container {
+    margin: 0%;
+    overflow-x: hidden;
+    padding: 0px;
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    overflow: hidden;
+  }
+  .video-container video {
+    width: 99%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 899px) {
+  .video-container {
+    overflow-x: hidden;
+    padding: 0px;
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    overflow: hidden;
+  }
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+  }
+}
+@media (max-width: 400px) {
+  .video-container {
+    overflow-x: hidden;
+    padding: 0px;
+    width: 100%;
+    height: 34vh;
+    background-color: black;
+    overflow: hidden;
+  }
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
   }
 }
 /*--------------------------------------------------------------
@@ -227,7 +289,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: hsl(138, 68%, 15%);
 }
 .section-title h2::after {
   content: "";
@@ -235,7 +297,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: hsl(138, 68%, 36%);
   bottom: 0;
   left: 0;
 }
@@ -249,7 +311,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #173b6c;
+  color: hsl(138, 68%, 20%);
 }
 .about .content ul {
   list-style: none;
@@ -266,7 +328,7 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #149ddd;
+  color: hsl(138, 68%, 36%);
   line-height: 0;
 }
 .about .content p:last-child {
@@ -303,7 +365,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #149ddd;
+  background-color: hsl(138, 68%, 36%);
 }
 
 /*--------------------------------------------------------------
@@ -319,7 +381,7 @@ section {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid hsl(138, 68%, 20%);
   position: relative;
 }
 .resume .resume-item h4 {
@@ -328,7 +390,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: hsl(138, 68%, 20%);
   margin-bottom: 10px;
 }
 .resume .resume-item h5 {
@@ -357,7 +419,7 @@ section {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #1f5297;
+  border: 2px solid hsl(138, 68%, 20%);
 }
 
 /*--------------------------------------------------------------
@@ -388,7 +450,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
+  color: hsl(138, 68%, 36%);
 }
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
@@ -426,15 +488,15 @@ section {
   color: #fff;
   font-size: 28px;
   text-align: center;
-  background: rgba(20, 157, 221, 0.75);
+  background: hsl(138, 68%, 36%);
   transition: 0.3s;
   width: 50%;
 }
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
+  background: hsl(138, 68%, 46%);
 }
 .portfolio .portfolio-wrap .portfolio-links a + a {
-  border-left: 1px solid #37b3ed;
+  border-left: 1px solid #fff;
 }
 .portfolio .portfolio-wrap:hover::before {
   top: 0;
@@ -466,10 +528,10 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #149ddd;
+  border: 1px solid hsl(138, 68%, 36%);
 }
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+  background-color: hsl(138, 68%, 36%);
 }
 .portfolio-details .portfolio-info {
   padding: 30px;
@@ -516,7 +578,7 @@ section {
 }
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: hsl(138, 68%, 46%);
   float: left;
   width: 44px;
   height: 44px;
@@ -561,11 +623,11 @@ section {
   margin-right: 10px;
 }
 .contact .info .social-links a:hover {
-  background: #149ddd;
+  background: hsl(138, 68%, 36%);
   color: #fff;
 }
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #149ddd;
+  background: hsl(138, 68%, 36%);
   color: #fff;
 }
 .contact .php-email-form {
@@ -639,7 +701,7 @@ section {
   padding: 10px 15px;
 }
 .contact .php-email-form button[type=submit] {
-  background: #149ddd;
+  background: hsl(138, 68%, 36%);
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -647,7 +709,7 @@ section {
   border-radius: 4px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #37b3ed;
+  background: hsl(138, 68%, 42%);
 }
 @-webkit-keyframes animate-loading {
   0% {

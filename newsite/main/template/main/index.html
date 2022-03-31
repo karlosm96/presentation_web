@@ -25,7 +25,7 @@
     <link href="{% static '/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   
     <!-- Template Main CSS File -->
-    <link href="{% static 'main/css/style.css' %}" rel="stylesheet">
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
     
 {% endblock %}
 
@@ -37,38 +37,40 @@
 
     {% block header %}
         <header id="header">
-            <div class="d-flex flex-column">
+            <canvas id="fractal"></canvas>
+                <div class="d-flex flex-column">
 
-            <div class="profile">
-                <img src="{% static '/img/profile-img.jpg' %}" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="index.html">Carlos Muñoz</a></h1>
-                <div class="social-links mt-3 text-center">
-                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <div class="profile">
+                    <img src="{% static '/img/profile-img.jpg' %}" alt="" class="img-fluid rounded-circle">
+                    <h1 class="text-light"><a href="index.html">Carlos Muñoz</a></h1>
+                    <div class="social-links mt-3 text-center">
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
                 </div>
-            </div>
 
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-                </ul>
-            </nav><!-- .nav-menu -->
-            </div>
+                <nav id="navbar" class="nav-menu navbar">
+                    <ul>
+                        <li><a href="#video-container" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+                        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+                    </ul>
+                </nav><!-- .nav-menu -->
+                </div>
+            </canvas>
         </header>
 
         
 
         <section class="video-container" id="video-container" class="d-flex flex-column justify-content-center align-items-center">
-            <video autoplay controls>
-                <source src="{% static '/vid/matrix_vid.mp4' %}" type="video/mp4">
-            </video>
+                <video autoplay muted loop>
+                    <source src="{% static '/vid/matrix_vid.mp4' %}" type="video/mp4">
+                </video>  
         </section>
 
         <!--<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
@@ -478,6 +480,8 @@
         <script src="{% static '/vendor/waypoints/noframework.waypoints.js' %}"></script>
 
         <script src="{% static '/js/main.js' %}"></script>
+
+        <script src="{% static '/js/fractal.js' %}"></script>
 
     {% endblock %}
 
