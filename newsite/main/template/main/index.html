@@ -63,12 +63,21 @@
             </div>
         </header>
 
-        <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        
+
+        <section class="video-container" id="video-container" class="d-flex flex-column justify-content-center align-items-center">
+            <video autoplay controls>
+                <source src="{% static '/vid/matrix_vid.mp4' %}" type="video/mp4">
+            </video>
+        </section>
+
+        <!--<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
             <div class="hero-container" data-aos="fade-in">
                 <h1>Carlos Muñoz</h1>
                 <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
             </div>
-        </section>
+        </section>-->
+        
     {% endblock %}
 
     {% block main %}
